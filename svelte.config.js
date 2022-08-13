@@ -14,7 +14,11 @@ const config = {
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
 		}
-	}
+	},
+
+	css: css => {
+        css.write('public/bundle.css')
+    },
 };
 
 export default config;
