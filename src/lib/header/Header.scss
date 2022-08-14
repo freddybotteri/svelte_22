@@ -1,6 +1,8 @@
 .headerContent{
     margin-top: 1rem;
     display: flex;
+    position: fixed;
+    background-color: #FFFFFF;
 
     &__logoContent {
         width: 20%;
@@ -55,17 +57,6 @@
         }
     }
 }
-
-
-
-path {
-    fill: var(--background);
-}
-
-
-
-
-
 
 a:hover {
     color: var(--accent-color);

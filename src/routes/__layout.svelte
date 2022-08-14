@@ -5,7 +5,7 @@
 
 <Header />
 
-<main>
+<main class="mainContent">
 	<slot />
 </main>
 
