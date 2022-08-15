@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+.books{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.book {
+    text-align: center;
+    cursor: pointer;
+    padding: 0.3em;
+    border-radius: 2em;
+    box-shadow: 2px 5px rgba(93, 93, 93, 30%);
+    background-color: indianred;
+    
+}
+.book_author{
+    color:#202020;
+}
+.book_name{
+    color: aliceblue;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+.review{
+    background-color:aliceblue;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    box-shadow: -4px 5px rgba(93, 93, 93, 30%);
+    padding: 1em;
+    font-size: large;
+    text-align: justify;
+    flex-basis: auto;
+    width: 100%;
+    min-width: 15em;
+
+}

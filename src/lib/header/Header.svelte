@@ -49,6 +49,14 @@
 				sveltekit:prefetch href="/books">Books</a>
 			</li>
 
+			<li
+			class="headerContent__nav__list__item"
+			class:active={$page.url.pathname === '/wikipedia'}>
+				<a 
+				class="headerContent__nav__list__item-text"
+				sveltekit:prefetch href="/wikipedia">Wikipedia</a>
+			</li>
+
 		</ul>
 
 	</nav>
