@@ -1,8 +1,9 @@
 .headerContent{
-    margin-top: 1rem;
+
     display: flex;
     position: fixed;
     background-color: #FFFFFF;
+    width: 100%;
 
     &__logoContent {
         width: 20%;
@@ -32,6 +33,7 @@
             list-style-type: none;
             height: 100%;
             text-align: center;
+            background-color: #FFFFFF;
 
 
             &__item {

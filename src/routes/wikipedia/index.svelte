@@ -1,5 +1,10 @@
 <script lang="ts">
 	import { enhance } from '$lib/form';
+	import Content from '$lib/Content.svelte';
+	import Popup from '$lib/Popup.svelte';
+	import Modal from '$lib/Modal.svelte';
+	import { modal } from '../store.ts';
+
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 
@@ -14,17 +19,25 @@
 
 </script>
 
+
+
+
 <svelte:head>
 	<title>Wikipedia</title>
 </svelte:head>
 
-<div class="container">
+<div class="wikiContainer">
 
-	<div class="books">
+	<div class="wikiContainer__list">
+
 		{#each wikis as data(data.id)}
 	
-			<div class="book_author">
-				{data.name}
+			<div class="wikiContainer__list__item">
+				<p>{data.email}</p>
+				<p>{data.name}</p>
+				<Modal show={$modal}>
+					<Content />
+				</Modal>
 			</div>
 	
 		{/each}
