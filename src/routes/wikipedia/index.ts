@@ -29,5 +29,3 @@ export const get: any = async ({ }) => {
 		
 	};
 };
-
-

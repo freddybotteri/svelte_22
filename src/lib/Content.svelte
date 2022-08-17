@@ -1,6 +1,8 @@
 <script>
     import { getContext } from 'svelte';
-      import { fly } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
+
+    import { getPost } from '../services/placeholder.service'
       
     import Popup from './Popup.svelte';
     import CloseButton from './CloseButton.svelte';
@@ -9,8 +11,19 @@
     const { open } = getContext('simple-modal');
       
   
-    const showPopup = () => {
-        open(Popup, { message: "Search api id" });
+    const showPopup = async () => {
+
+        let title = '';
+
+        const data = await getPost();
+        if(data.status === 404){
+            title = 'warning id placeholder'; 
+        }else{
+            const result = await data.json();
+            title =  result.title;
+        } 
+
+        open(Popup, { message: title });
     };
 
   
