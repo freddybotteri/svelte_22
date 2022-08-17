@@ -8,13 +8,15 @@
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 
-	
-	var reviews = '';
-	function show_review(review) {
-		reviews = review;		
-	}
 
-	export let wikis: any[], review: reviews;
+	export let wikis: any[] = [];
+	let lista = '';
+
+	$: estadoLista = lista;
+
+	function elementClick(email: string) {
+		lista = email;
+	};
 
 
 </script>
@@ -30,10 +32,12 @@
 
 	<div class="wikiContainer__list">
 
+		<p>Lista: {estadoLista}</p>
+
 		{#each wikis as data(data.id)}
 	
 			<div class="wikiContainer__list__item">
-				<p>{data.email}</p>
+				<p on:click="{elementClick(data.email)}">{data.email}</p>
 				<p>{data.name}</p>
 				<Modal show={$modal}>
 					<Content />
